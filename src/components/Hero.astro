@@ -1,0 +1,141 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<section class="hero">
+	<div class="hero-container">
+		<h1 class="site-title">The Code Hatch</h1>
+		<div class="hero-content">
+			<div class="hero-logo-container">
+				<Image src="/public/logo.png" alt="The Code Hatch" class="hero-logo" width={220} height={220} loading="lazy" />
+			</div>
+			<div class="hero-text">
+				<h2 class="hero-headline">
+					We host <span class="underline-dashed">coding competitions and workshops</span> to empower teenagers with <em>coding skills</em> in Phoenix.
+				</h2>
+					<div class="hero-cta">
+						<a href="https://forms.hackclub.com/thecodehatch" target="_blank" class="btn btn-primary btn-ripple">
+						JOIN MAILING LIST
+					</a>
+						<a href="https://hcb.hackclub.com/donations/start/thecodehatch" target="_blank" class="btn btn-secondary btn-ripple">
+						DONATE
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--primary-bg);
+		padding: 2rem 1.5rem;
+	}
+
+	.hero-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.site-title {
+		font-family: 'Dancing Script', cursive;
+		font-size: clamp(2.25rem, 7vw, 6.5rem);
+		margin: 0 0 3rem 0;
+		color: var(--text-dark);
+		letter-spacing: -0.01em;
+		font-weight: 700;
+		line-height: 0.95;
+		transition: none;
+		display: inline-block;
+	}
+
+	.hero-logo-container {
+		margin-bottom: 2rem;
+	}
+
+	.hero-logo {
+		height: 200px;
+		width: auto;
+	}
+
+	.hero-headline {
+		font-size: clamp(1.5rem, 5vw, 3rem);
+		font-weight: 300;
+		line-height: 1.4;
+		margin-bottom: 2rem;
+		color: var(--text-dark);
+	}
+
+	.underline-dashed {
+		border-bottom: 2px dashed var(--text-dark);
+		padding-bottom: 2px;
+	}
+
+	.hero-headline em {
+		font-style: italic;
+	}
+
+	.hero-cta {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.75rem 1.5rem;
+		border-radius: 2rem;
+		border: 1px solid #d1d1d1;
+		font-size: 0.75rem;
+		font-weight: 500;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		font-family: 'Monaco', 'Courier New', monospace;
+	}
+
+	.btn-primary {
+		background: #000;
+		color: #fff;
+	}
+
+	.btn-primary:hover {
+		background: var(--text-muted);
+	}
+
+	.btn-secondary {
+		background: var(--primary-bg);
+		color: var(--text-dark);
+	}
+
+	.btn-secondary:hover {
+		background: #e5e1d8;
+	}
+
+	.btn-icon {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	@media (min-width: 768px) {
+		.hero-logo {
+			height: 250px;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.hero {
+			padding: 1rem;
+		}
+
+		.hero-headline {
+			font-size: 1.5rem;
+		}
+	}

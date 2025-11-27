@@ -1,0 +1,138 @@
+---
+---
+---
+---
+
+<section class="who-can-come">
+	<div class="section-container">
+		<div class="two-col media-left-layout">
+			<div class="media-col media-left">
+				<div class="emoji-block section-emoji" aria-hidden>🌟</div>
+			</div>
+			<div class="text-col">
+				<div class="section-badge">
+					WHO CAN COME
+				</div>
+				<h3 class="section-title">
+					There is a place for <em>everyone</em> at The Code Hatch, no matter your skill.
+				</h3>
+				<p class="section-text">
+					We know it can be intimidating to start (we've been there),<br />
+					but you'll be surrounded by others doing the same.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.who-can-come {
+		background-color: var(--primary-bg);
+	}
+
+	.section-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 5rem 2rem;
+		text-align: center;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1.5rem;
+		border-radius: 2rem;
+		border: 2px solid var(--accent-orange);
+		color: var(--accent-orange);
+		font-size: 0.75rem;
+		font-weight: 500;
+		margin-bottom: 2rem;
+		font-family: 'Monaco', 'Courier New', monospace;
+	}
+
+	.section-title {
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+		font-weight: 300;
+		line-height: 1.4;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-title em {
+		font-style: italic;
+	}
+
+	.section-text {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--text-dark);
+		max-width: 800px;
+		margin: 0 auto;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	@media (min-width: 768px) {
+		.section-container {
+			padding: 8rem 2rem;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.section-title {
+			font-size: 1.5rem;
+		}
+	}
+
+	.two-col {
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+		grid-template-columns: auto 1fr;
+	}
+
+	.media-col {
+		display: flex;
+		justify-content: center;
+	}
+
+	.text-col {
+		max-width: 720px;
+		text-align: left;
+	}
+
+	.two-col.media-left-layout {
+		grid-template-columns: auto 1fr;
+	}
+
+	.two-col.media-right-layout {
+		grid-template-columns: 1fr auto;
+	}
+
+	.two-col.media-left-layout .text-col {
+		text-align: right;
+	}
+
+	@media (max-width: 880px) {
+		.two-col {
+			grid-template-columns: 1fr;
+		}
+
+		.text-col {
+			grid-row: 1;
+			text-align: center;
+		}
+
+		.two-col.media-left-layout .text-col {
+			text-align: center;
+		}
+
+		.media-col {
+			grid-row: 2;
+			justify-content: center;
+		}
+	}
+</style>

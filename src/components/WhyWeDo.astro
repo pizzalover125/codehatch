@@ -1,0 +1,110 @@
+---
+---
+---
+---
+
+<section class="why-we-do">
+	<div class="section-container">
+			<div class="two-col media-left-layout">
+			<div class="media-col media-left">
+				<div class="emoji-block section-emoji" aria-hidden>❤️</div>
+			</div>
+			<div class="text-col">
+				<div class="section-badge badge-blue">
+					WHY WE DO WHAT WE DO
+				</div>
+				<h3 class="section-title">
+					We like helping great people do great things.
+				</h3>
+				<p class="section-text">
+					We're united by the love of coding, and we want to help you do the same.<br />
+					Based in Phoenix? <a href="https://forms.hackclub.com/thecodehatch">Come join us</a>.<br />
+					Want to help? <a href="https://hcb.hackclub.com/donations/start/thecodehatch">Support our mission</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.why-we-do {
+		background-color: var(--primary-bg);
+	}
+
+	.section-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 5rem 2rem;
+		text-align: center;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1.5rem;
+		border-radius: 2rem;
+		border: 2px solid var(--accent-orange);
+		color: var(--accent-orange);
+		font-size: 0.75rem;
+		font-weight: 500;
+		margin-bottom: 2rem;
+		font-family: 'Monaco', 'Courier New', monospace;
+	}
+
+	.badge-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.section-title {
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+		font-weight: 300;
+		line-height: 1.4;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-text {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--text-dark);
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.section-text a {
+		color: var(--text-muted);
+		border-bottom: 2px solid var(--text-muted);
+		text-decoration: none;
+	}
+
+	@media (min-width: 768px) {
+		.section-container {
+			padding: 8rem 2rem;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.section-title {
+			font-size: 1.5rem;
+		}
+	}
+
+	.two-col{
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+		grid-template-columns: auto 1fr;
+	}
+	.media-col{ display:flex; justify-content:center; }
+	.text-col{ max-width: 720px; text-align: right; }
+
+	.two-col.media-left-layout{ grid-template-columns: auto 1fr; }
+	.two-col.media-right-layout{ grid-template-columns: 1fr auto; }
+
+	@media (max-width: 880px){
+		.two-col{ grid-template-columns: 1fr; }
+		.text-col{ grid-row: 1; text-align: center; margin: 0 auto; }
+		.media-col{ grid-row: 2; justify-content: center; }
+	}
+</style>

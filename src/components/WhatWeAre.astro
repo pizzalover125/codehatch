@@ -1,0 +1,130 @@
+---
+---
+
+<section class="what-we-are">
+	<div class="section-container">
+			<div class="two-col media-right-layout">
+			<div class="text-col">
+				<div class="section-badge">
+					WHAT WE ARE
+				</div>
+				<h3 class="section-title">
+					An open collective <em>of</em> coders,<br />
+					engineers, designers,
+					and everything in-between.
+				</h3>
+				<p class="section-subtitle">
+					The Code Hatch is a community bringing together teenagers who want to <em>make</em> stuff,<br class="desktop-only" /> 
+					and <a href="https://forms.hackclub.com/thecodehatch">you're invited</a>.
+				</p>
+			</div>
+			<div class="media-col media-right">
+				<div class="emoji-block section-emoji" aria-hidden>🤝</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.what-we-are {
+		background-color: var(--primary-bg);
+	}
+
+	.section-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 5rem 2rem;
+		text-align: center;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1.5rem;
+		border-radius: 2rem;
+		border: 2px solid var(--accent-orange);
+		color: var(--accent-orange);
+		font-size: 0.75rem;
+		font-weight: 500;
+		margin-bottom: 2rem;
+		font-family: 'Monaco', 'Courier New', monospace;
+	}
+
+	.badge-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.section-title {
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+		font-weight: 300;
+		line-height: 1.4;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-title em {
+		font-style: italic;
+	}
+
+	.gradient-text,
+	.gradient-text * {
+		background: linear-gradient(to right, var(--accent-olive), #000);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+	}
+
+	.section-subtitle {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--text-dark);
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.section-subtitle a {
+		color: var(--text-muted);
+		border-bottom: 2px solid var(--text-muted);
+		text-decoration: none;
+	}
+
+	.desktop-only {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.desktop-only {
+			display: inline;
+		}
+
+		.section-container {
+			padding: 8rem 2rem;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.section-title {
+			font-size: 1.5rem;
+		}
+	}
+
+	.two-col{
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+		grid-template-columns: 1fr auto;
+	}
+	.media-col{ display:flex; justify-content:center; }
+	.text-col{ max-width: 720px; text-align: left; }
+
+	.two-col.media-left-layout{ grid-template-columns: auto 1fr; }
+	.two-col.media-right-layout{ grid-template-columns: 1fr auto; }
+
+	@media (max-width: 880px){
+		.two-col{ grid-template-columns: 1fr; }
+		.text-col{ grid-row: 1; text-align: center; }
+		.media-col{ grid-row: 2; justify-content: center; }
+	}
+</style>

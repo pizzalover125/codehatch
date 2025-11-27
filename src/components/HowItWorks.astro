@@ -1,0 +1,112 @@
+---
+---
+---
+---
+
+<section class="how-it-works">
+	<div class="two-col media-right-layout">
+		<div class="text-col">
+			<div class="section-badge badge-green">
+				HOW IT WORKS
+			</div>
+			<h3 class="section-title">
+				Workshops, talks, project time,<br />
+				ending with casual open <em>demos</em><br />
+				<span class="muted-text">+ snacks along the way.</span>
+			</h3>
+			<p class="section-text">
+				The real magic is in the demos - <em>you</em> made something you are proud of. It's a chance to share your work, get feedback, and celebrate your progress. And of course, make new friends.
+			</p>
+		</div>
+			<div class="media-col media-right">
+				<div class="emoji-block section-emoji" aria-hidden>🛠️</div>
+			</div>
+	</div>
+</section>
+
+<style>
+	.how-it-works {
+		background-color: var(--primary-bg);
+	}
+
+	.section-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 5rem 2rem;
+		text-align: center;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1.5rem;
+		border-radius: 2rem;
+		border: 2px solid var(--accent-orange);
+		color: var(--accent-orange);
+		font-size: 0.75rem;
+		font-weight: 500;
+		margin-bottom: 2rem;
+		font-family: 'Monaco', 'Courier New', monospace;
+	}
+
+	.badge-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.section-title {
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+		font-weight: 300;
+		line-height: 1.4;
+		margin-bottom: 1.5rem;
+	}
+
+	.section-title em {
+		font-style: italic;
+	}
+
+	.muted-text {
+		color: #CFCCC4;
+		font-style: italic;
+	}
+
+	.section-text {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--text-dark);
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		.section-container {
+			padding: 8rem 2rem;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.section-title {
+			font-size: 1.5rem;
+		}
+	}
+
+	.two-col{
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+		grid-template-columns: 1fr auto;
+		max-width: 1200px; margin: 0 auto; padding: 5rem 2rem;
+	}
+	.media-col{ display:flex; justify-content:center; }
+	.text-col{ max-width: 720px; text-align: left; }
+
+	.two-col.media-left-layout{ grid-template-columns: auto 1fr; }
+	.two-col.media-right-layout{ grid-template-columns: 1fr auto; }
+
+	@media (max-width: 880px){
+		.two-col{ grid-template-columns: 1fr; }
+		.text-col{ grid-row: 1; text-align: center; }
+		.media-col{ grid-row: 2; justify-content: center; }
+	}
+</style>

@@ -1,0 +1,262 @@
+---
+import FrostbyteBanner from '../components/FrostbyteBanner.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import WhatWeAre from '../components/WhatWeAre.astro';
+import WhoCanCome from '../components/WhoCanCome.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhyWeDo from '../components/WhyWeDo.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/public/logo.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>The Code Hatch</title>
+		<meta name="description" content="We host events and workshops to empower teenagers with coding skills in Phoenix. Join our community of young coders." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<FrostbyteBanner />
+		<div class="site-container">
+			<Hero />
+			<WhatWeAre />
+			<WhoCanCome />
+			<HowItWorks />
+			<WhyWeDo />
+			<About />
+			<Footer />
+		</div>
+
+		<style is:global>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--primary-bg: #F5F1E8;
+				--text-dark: #41403F;
+				--text-muted: #706F6B;
+				--accent-red: #C6482C;
+				--accent-orange: #ff7a18;
+				--accent-purple: #854F6F;
+				--accent-green: #758F2A;
+				--accent-olive: #899248;
+				--accent-blue: #2C64B7;
+				--white: #FBF8EF;
+				--dark-bg: #4A4948;
+			}
+
+			body {
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+				background-color: var(--primary-bg);
+				color: var(--text-dark);
+				overflow-x: hidden;
+			}
+
+			.site-container {
+				position: relative;
+				width: 100%;
+			}
+		</style>
+
+		<style is:global>
+			@media (max-width: 880px) {
+				.media-col,
+				.photo-wrap,
+				.image-placeholder,
+				.founder-photo,
+				.hero-logo,
+				.photo {
+					display: none !important;
+				}
+
+				.text-col,
+				.section-container,
+				.content-col {
+					grid-column: 1 / -1 !important;
+					width: 100% !important;
+				}
+			}
+		</style>
+
+		<style is:global>
+			.emoji-block {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: clamp(4rem, 10vw, 9rem);
+				line-height: 1;
+			}
+
+			.section-emoji {
+				width: 300px;
+				height: 320px;
+			}
+
+			@media (max-width: 880px) {
+				.emoji-block {
+					display: none !important;
+				}
+			}
+		</style>
+
+		<style is:global>
+			.fade-in {
+				opacity: 0;
+				transform: translateY(12px);
+				transition: opacity 0.6s ease, transform 0.6s ease;
+				will-change: opacity, transform;
+			}
+
+			.fade-in.in-view {
+				opacity: 1;
+				transform: none;
+			}
+
+			.site-container,
+			head,
+			body,
+			html {
+				opacity: 1 !important;
+				transform: none !important;
+				transition: none !important;
+			}
+
+			:root{
+				--interactive-transition: 200ms cubic-bezier(.2,.9,.3,1);
+				--btn-shadow: 0 12px 30px rgba(12,18,30,0.09);
+			}
+
+			.btn{ position: relative; overflow: hidden; transition: transform var(--interactive-transition), box-shadow var(--interactive-transition), opacity var(--interactive-transition); }
+			.btn:hover{ transform: translateY(-3px); box-shadow: var(--btn-shadow); }
+			.btn:active{ transform: translateY(-1px) scale(.997); }
+			.btn:focus-visible{ outline: 3px solid rgba(124,58,237,0.16); outline-offset: 4px; }
+
+			.banner-card{ transition: transform var(--interactive-transition), box-shadow var(--interactive-transition); }
+			.banner-card:hover{ transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.09); }
+
+			.link-underline{ position: relative; text-decoration: none; }
+			.link-underline::after{ content: ''; position: absolute; left: 0; right: 100%; bottom: -3px; height: 2px; background: var(--accent-blue); transition: right .28s ease; }
+			.link-underline:hover::after{ right: 0; }
+
+			.photo-wrap{ position: relative; display: inline-block; border-radius: 12px; overflow: visible; transition: transform 320ms cubic-bezier(.2,.9,.3,1), box-shadow 320ms; }
+			.photo-wrap img{ display:block; width:100%; height:auto; border-radius: 10px; box-shadow: 0 14px 36px rgba(10,10,10,0.12); border: 3px solid var(--accent-orange); }
+
+			.photo-wrap.flair-twist{ transform: rotate(-4deg) translateY(-8px); }
+			.photo-wrap.flair-twist::before{ content:''; position:absolute; left:-18px; top:12px; width:48px; height:48px; border-radius:12px; background: var(--accent-orange); filter: blur(6px); opacity: 0.12; z-index:0; }
+			.photo-wrap.flair-twist::after{ content:''; position:absolute; right:-14px; bottom:-14px; width:72px; height:72px; border-radius:50%; border:4px solid var(--accent-orange); z-index:0; }
+
+			.photo-wrap.flair-spark{ transform: rotate(2deg) translateY(-4px); }
+
+			.photo-wrap.flair-spot::before{ content:''; position:absolute; left:-26px; top:20%; width:84px; height:84px; border-radius:14px; background: radial-gradient(circle at 10% 30%, var(--accent-orange), transparent 45%); filter: blur(12px); opacity: 0.14; z-index:0; }
+			.photo-wrap.flair-spot{ transform: rotate(-2.5deg) translateY(-6px); }
+
+			.photo-wrap.flair-ring::before{ content:''; position:absolute; right:-20px; bottom:-12px; width:84px; height:84px; border-radius:50%; border:6px solid var(--accent-orange); z-index:0; }
+			.photo-wrap.flair-ring{ transform: rotate(3deg) translateY(-5px); }
+
+			.photo-wrap.flair-twist::before,
+			.photo-wrap.flair-twist::after,
+			.photo-wrap.flair-spot::before,
+			.photo-wrap.flair-ring::before,
+			.photo-wrap.flair-ring::after { display: none !important; }
+
+			.photo-wrap:hover{ transform: rotate(0deg) translateY(-6px); box-shadow: 0 22px 56px rgba(10,10,10,0.16); }
+
+			@media (prefers-reduced-motion: reduce){ .photo-wrap{ transition: none !important; } .photo-wrap::before, .photo-wrap::after{ display:none !important; } }
+
+			.ripple{ position: absolute; border-radius: 50%; background: rgba(255,255,255,0.28); transform: scale(0); opacity: 1; pointer-events: none; transition: transform 600ms cubic-bezier(.2,.9,.3,1), opacity 600ms ease; }
+
+			@media (prefers-reduced-mot	ion: reduce){
+				.btn, .fade-in, .founder-photo, .banner-card { transition: none !important; }
+			}
+		</style>
+
+	</body>
+</html>
+
+<script>
+(function(){
+	function shouldSkip(el: Element){
+		const skipTags = ['SCRIPT','STYLE','LINK','META','NOSCRIPT'];
+		try{
+			if (!el || !el.tagName) return true;
+			if (skipTags.includes(el.tagName)) return true;
+			if (el.closest && el.closest('head')) return true;
+		} catch(e) {
+			return true;
+		}
+		return false;
+	} // asdjaoidjiojasd
+
+	function collectTargets(){
+		const container = document.querySelector('.site-container') || document.body;
+		const all = Array.from(container.querySelectorAll('*'));
+		return all.filter(el => {
+			if (shouldSkip(el)) return false;
+			if (el === container) return false;
+			if (el.classList && el.classList.contains('no-fade')) return false;
+			const style = window.getComputedStyle(el);
+			if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return false;
+			return true;
+		});
+	}
+
+	function init(){
+		const targets = collectTargets();
+		targets.forEach(el => el.classList.add('fade-in'));
+
+		const io = new IntersectionObserver((entries, obs) => {
+			entries.forEach(e => {
+				if (e.isIntersecting) {
+					e.target.classList.add('in-view');
+					obs.unobserve(e.target);
+				}
+			});
+		}, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.06 });
+
+		targets.forEach(t => io.observe(t));
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', init);
+	} else {
+		init();
+	}
+})();
+</script>
+
+<script>
+(function(){ // asidjaiosdj
+	function initRipples(){
+		const buttons = document.querySelectorAll<HTMLElement>('.btn-ripple');
+		buttons.forEach(btn => {
+			btn.addEventListener('pointerdown', function(e: PointerEvent){
+				const rect = btn.getBoundingClientRect();
+				const ripple = document.createElement('span');
+				ripple.className = 'ripple';
+				const size = Math.max(rect.width, rect.height) * 1.2;
+				ripple.style.width = ripple.style.height = size + 'px';
+				ripple.style.left = (e.clientX - rect.left - size/2) + 'px';
+				ripple.style.top = (e.clientY - rect.top - size/2) + 'px';
+				btn.appendChild(ripple);
+				requestAnimationFrame(()=>{ ripple.style.transform = 'scale(1)'; ripple.style.opacity = '0'; });
+				setTimeout(()=>{ try{ ripple.remove(); }catch(e){} }, 700);
+			});
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initRipples);
+	} else {
+		initRipples();
+	}
+})();
+</script>

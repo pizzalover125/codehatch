@@ -1,0 +1,135 @@
+---
+---
+
+<section class="about">
+	<div class="section-container">
+		<div class="section-badge">
+			WHO WE ARE
+		</div>
+		<div class="about-grid">
+			<div class="about-image">
+				<div>
+					<img src="https://media.licdn.com/dms/image/v2/D4E03AQG4OHoPf4bQ_Q/profile-displayphoto-scale_200_200/B4EZnP53buKcAY-/0/1760129680870?e=1765411200&v=beta&t=NrA_BEqljTEWA-nBTggCRHCA4TIC3jXr-eQWnh4Emkk" alt="Aaradhya Panda - Founder" class="founder-photo" loading="lazy" />
+				</div>
+				<div class="founder-info">
+					<h4 class="founder-name">Aaradhya Panda</h4>
+					<p class="founder-title">Founder & CEO</p>
+					<p class="founder-bio">
+						From a young age, I've loved coding and hackathons. But when I found out that Phoenix had no hackathons for teenagers, I was astonished. That's why I started The Code Hatch — to create a space where teens can learn, collaborate, and grow their coding skills in a supportive environment.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		background-color: var(--primary-bg);
+	}
+
+	.section-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 5rem 2rem;
+		text-align: center;
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1.5rem;
+		border-radius: 2rem;
+		border: 2px solid var(--accent-orange);
+		color: var(--accent-orange);
+		font-size: 0.75rem;
+		font-weight: 500;
+		margin-bottom: 2rem;
+		font-family: 'Monaco', 'Courier New', monospace;
+	}
+
+	.about-grid {
+		max-width: 600px;
+		margin: 0 auto 3rem;
+		text-align: center;
+	}
+
+	.about-image {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.founder-photo {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 3px solid var(--accent-orange);
+		box-shadow: 0 20px 60px rgba(12, 18, 30, 0.12);
+	}
+
+	.founder-info {
+		text-align: center;
+	}
+
+	.founder-name {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--text-dark);
+		margin-bottom: 0.25rem;
+	}
+
+	.founder-title {
+		font-size: 0.9rem;
+		color: var(--accent-red);
+		font-weight: 500;
+		font-family: 'Monaco', 'Courier New', monospace;
+		margin-bottom: 1rem;
+	}
+
+	.founder-bio {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--text-dark);
+		max-width: 500px;
+	}
+
+	@media (min-width: 768px) {
+		.section-container {
+			padding: 8rem 2rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.about-grid {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.section-title {
+			font-size: 1.5rem;
+		}
+
+		.about-image {
+			align-items: center;
+			text-align: center;
+		}
+
+		.founder-info {
+			text-align: center;
+		}
+
+		.founder-bio {
+			margin: 0 auto;
+		}
+
+		.founder-photo {
+			width: 150px;
+			height: 150px;
+		}
+	}
+</style>
