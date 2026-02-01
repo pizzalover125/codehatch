@@ -1,0 +1,119 @@
+<section class="past-events">
+	<div class="section-container">
+		<div class="section-badge">
+			PAST EVENTS
+		</div>
+		<div class="event-card">
+			<div class="event-logo">
+				<img src="https://meltdown.hackclub.com/images/meltdown.gif" alt="Meltdown Event" loading="lazy" />
+			</div>
+			<div class="event-details">
+				<ul>
+					<li>September 2025</li>
+					<li>20+ participants</li>
+					<li>The Code Hatch's first flagship event</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.past-events {
+		width: 100%;
+		padding: 4rem 1rem;
+		background-color: var(--primary-bg);
+	}
+
+	.section-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.section-badge {
+		display: inline-block;
+		background-color: var(--text-dark);
+		color: var(--primary-bg);
+		padding: 0.5rem 1.5rem;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		letter-spacing: 2px;
+		margin-bottom: 2rem;
+	}
+
+	.event-card {
+		background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+		border-radius: 20px;
+		padding: 2.5rem;
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+		box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.event-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+	}
+
+	.event-logo {
+		flex-shrink: 0;
+	}
+
+	.event-logo img {
+		width: 300px;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.event-details {
+		flex: 1;
+	}
+
+	.event-details ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.event-details li {
+		color: white;
+		font-size: 1.3rem;
+		font-weight: 600;
+		padding: 0.75rem 0;
+		position: relative;
+		padding-left: 2rem;
+	}
+
+	.event-details li::before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+
+	@media (max-width: 768px) {
+		.event-card {
+			flex-direction: column;
+			text-align: center;
+			gap: 2rem;
+			padding: 2rem;
+		}
+
+		.event-logo img {
+			width: 200px;
+		}
+
+		.event-details li {
+			font-size: 1.1rem;
+			padding-left: 1.5rem;
+		}
+
+		.event-details li::before {
+			font-size: 1.2rem;
+		}
+	}
+</style>
