@@ -15,6 +15,18 @@
 				</ul>
 			</div>
 		</div>
+		<div class="event-card event-card-blue">
+			<div class="event-logo">
+				<img src="/logo2.svg" alt="Frostbyte Event" loading="lazy" />
+			</div>
+			<div class="event-details">
+				<ul>
+					<li>February 2026</li>
+					<li>40+ participants</li>
+					<li>The Code Hatch's 2nd flagship event</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -51,11 +63,25 @@
 		gap: 3rem;
 		box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		margin-bottom: 3rem;
 	}
 
 	.event-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+	}
+
+	.event-card-blue {
+		background: linear-gradient(135deg, #2C64B7 0%, #4A90E2 100%);
+		box-shadow: 0 10px 30px rgba(44, 100, 183, 0.3);
+	}
+
+	.event-card-blue:hover {
+		box-shadow: 0 15px 40px rgba(44, 100, 183, 0.4);
+	}
+
+	.event-card-blue .event-logo img {
+		background: transparent !important;
 	}
 
 	.event-logo {
